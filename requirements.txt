@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+matplotlib
+yfinance
+plotly
+datetime
+scipy
+openpyxl
+requests
+seaborn
+fundamentus
+riskfolio-lib
+statsmodels
