@@ -21,7 +21,7 @@ from statsmodels.regression.linear_model import OLS
 from statsmodels.tsa.stattools import adfuller
 import statsmodels.api as sm
 
-st.title("Harpa Quant Pro")
+st.markdown('<span style="color:gold; font-size: 48px">&#9733;</span> <span style="font-size: 48px; font-weight: bold">Harpa Quant Pro</span>', unsafe_allow_html=True)
 st.markdown("""##### Ferramentas quantitativas para o investidor prospectivo.""")
 st.markdown("""Escolha à esquerda a ferramenta (no celular, setinha bem em cima à esquerda).""")
 
