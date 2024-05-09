@@ -45,18 +45,16 @@ with col5:
 
 st.markdown('---')
 
-st.sidebar.markdown("""
-    Contato: harpaquant@gmail.com
-    """)
-
-st.sidebar.markdown('---')
-
 selected_calculator = st.sidebar.radio(
     "Selecione a ferramenta:",
     ("Long Short - Cointegração", "Long Short - Teste seu Par", "PCR - Put Call Ratio", "BDR - Spreads", "Carteiras", "Seguro da Carteira", "Cones de Volatilidade", "Monitor de 5 Dias")
 )
 
 st.sidebar.markdown('---')
+st.sidebar.markdown("""
+    Contato: harpaquant@gmail.com
+    """)
+
 
 ###########################
 ### CONES DE VOLATILIDADE
