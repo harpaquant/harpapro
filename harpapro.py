@@ -52,7 +52,7 @@ st.markdown('---')
 
 selected_calculator = st.sidebar.radio(
     "Selecione a ferramenta:",
-    ("Long Short - Cointegração", "Long Short - Teste seu Par", "PCR - Put Call Ratio", "BDR - Spreads", "Carteiras", "Seguro da Carteira", "Cones de Volatilidade", "Monitor de 5 Dias")
+    ("Long Short - Cointegração", "Long Short - Teste seu Par", "PCR - Put Call Ratio", "Carteiras", "Seguro da Carteira", "Cones de Volatilidade", "Monitor de 5 Dias")
 )
 
 st.sidebar.markdown('---')
@@ -456,38 +456,6 @@ elif selected_calculator == "Carteiras":
         dfrp = dfrp.drop(columns=['weights'])
         dfrp = dfrp.rename_axis('Código', axis='index')
         st.dataframe(dfrp)
-
-
-################################
-### BDR - Spreads
-    
-elif selected_calculator == "BDR - Spreads":
-    # Título do aplicativo
-    st.subheader('BDR - Maiores e Menores Spreads')
-    st.markdown("""
-        O spread entre ações americanas e BDRs reflete as diferenças de preços e 
-                condições de mercado entre os EUA e o Brasil. Enquanto as ações americanas 
-                são negociadas nos mercados dos EUA, os BDRs são recibos de ações estrangeiras 
-                negociadas na Bolsa brasileira. Há um spread, uma diferença entre o valor da ação
-                 e o da BDR equivalente (lembrando que um BDR não necessariamente corresponde a 
-                apenas um papel). Para calcular, você deve multiplicar o preço da ação pelo câmbio 
-                atual e pela proporção de ações no lote. A diferença entre esse valor e o do BDR é 
-                o spread. O spread pode variar devido a fatores como taxas de câmbio, liquidez 
-                e regulamentações. Os investidores devem estar atentos a essas diferenças ao 
-                considerar suas estratégias de investimento em ações globais. Abaixo, os maiores
-                e menores valores de spread para BDRs integrantes do índice BDRX B3.
-        """)
-    st.markdown('---')
-
-    bdrmaiores = pd.read_excel('bdrmaiores.xlsx')
-    bdrmenores = pd.read_excel('bdrmenores.xlsx')
-
-    # Exibir o DataFrame
-    st.markdown('#### Maiores Spreads')
-    st.markdown(bdrmaiores.style.hide(axis="index").to_html(), unsafe_allow_html=True)
-    st.markdown('---')
-    st.markdown('#### Menores Spreads')
-    st.markdown(bdrmenores.style.hide(axis="index").to_html(), unsafe_allow_html=True)
 
 ################################
 ### Long Short - Cointegração
