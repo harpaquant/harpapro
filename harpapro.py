@@ -439,7 +439,7 @@ elif selected_calculator == "Long Short - Cointegração":
         "RAIL3.SA", "RAIZ4.SA", "RDOR3.SA", "RENT3.SA", "RRRP3.SA", "SANB11.SA", "SBSP3.SA", "SLCE3.SA", 
         "SMTO3.SA", "SOMA3.SA", "SUZB3.SA", "TAEE11.SA", "TIMS3.SA", "TOTS3.SA", "UGPA3.SA", "USIM5.SA", 
         "VALE3.SA", "VBBR3.SA", "BHIA3.SA", "VIVT3.SA", "WEGE3.SA", "YDUQ3.SA"]
-    quotes = yf.download(assets, start = start, end = end)["Adj Close"]
+    quotes = yf.download(assets, start = start, end = end, progress=False)["Adj Close"]
     #drop a column
     quotes = quotes.drop(quotes.columns[1], axis=1)
     quotes.isna().sum().sum()  # Checking for NAs
