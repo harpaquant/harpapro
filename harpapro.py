@@ -363,7 +363,7 @@ elif selected_calculator == "Carteiras":
         #download data
         end = datetime.now()
         start = end - timedelta(days = 180)
-        data = yf.download(assets, start=start, end=end)
+        data = yf.download(assets, start=start, end=end, progress=False)
         # compute non-compounding, daily returns
         returns = data['Adj Close'].pct_change().dropna()
 
