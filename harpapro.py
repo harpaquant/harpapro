@@ -531,7 +531,7 @@ elif selected_calculator == "Monitor de 5 Dias":
         #### 10 ações que mais subiram e mais caíram nos últimos 5 dias úteis
         """)
         ## Retornos
-        cotas = yf.download(ativos, start=start, end=end)["Adj Close"]
+        cotas = yf.download(ativos, start=start, end=end, progress=False)["Adj Close"]
 
         # Calcular os retornos percentuais diários
         retornos_diarios = cotas.pct_change()
@@ -568,7 +568,7 @@ elif selected_calculator == "Monitor de 5 Dias":
         #### 10 ações que mais tiveram alta e queda de volume negociado nos últimos 5 dias úteis
         """)
         ## Volume
-        volume = yf.download(ativos, start=start, end=end)["Volume"]
+        volume = yf.download(ativos, start=start, end=end, progress=False)["Volume"]
         # Calcular os retornos percentuais diários
         mudanca_diaria_volume = volume.pct_change()
         # Calcular a variação percentual média nos últimos 5 dias úteis
@@ -606,7 +606,7 @@ elif selected_calculator == "Monitor de 5 Dias":
         st.markdown('---')
 
         # Calcular a volatilidade diária em uma janela móvel dos últimos 22 dias úteis para cada ação
-        cotas = yf.download(ativos, start=start, end=end)["Adj Close"]
+        cotas = yf.download(ativos, start=start, end=end, progress=False)["Adj Close"]
 
         # Calcular os retornos diários das ações
         retornos_diarios = cotas.pct_change()
