@@ -316,7 +316,7 @@ elif selected_calculator == "Carteiras":
         # Visualizando
         ativos = sorted_stocks.head(30)
         # Removendo baixa liquidez
-        codigos_a_remover = ['CEDO4', 'RSUL4', 'CEDO3', 'CAMB3', 'PETR3', 'MTSA4', 'DEXP3', 'MRSA6B']
+        codigos_a_remover = ['CEDO4', 'RSUL4', 'CEDO3', 'CAMB3', 'PETR3', 'DEXP3', 'MRSA6B']
         ativos = ativos.drop(codigos_a_remover, axis=0)
         carteiramf = ativos.head(10)
         colunas_para_remover = ['Earnings_Yield_Rank', 'ROIC_Rank', 'Magic_Formula_Rank']
