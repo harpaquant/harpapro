@@ -690,8 +690,8 @@ elif selected_calculator == "Long Short - Teste seu Par":
     # Botão para enviar os códigos e realizar as análises
     if st.button('Enviar'):
         # Obtendo os dados históricos das ações 
-        stock_data1 = yf.download(stock_code1 + '.SA', start = start, end = end)["Adj Close"]
-        stock_data2 = yf.download(stock_code2 + '.SA', start = start, end = end)["Adj Close"]
+        stock_data1 = yf.download(stock_code1 + '.SA', start = start, end = end, progress=False)["Adj Close"]
+        stock_data2 = yf.download(stock_code2 + '.SA', start = start, end = end, progress=False)["Adj Close"]
         residuos = linear_regressionr(stock_data2, stock_data1)
         pbeta = linear_regressionp(stock_data2, stock_data1)
 
