@@ -90,15 +90,15 @@ if selected_calculator == "Cones de Volatilidade":
         return log_return.rolling(window=window, center=False).std() * math.sqrt(252)
 
     if acaocone == 'ABEV3':
-        data = yf.download('ABEV3.SA', start=start)
+        data = yf.download('ABEV3.SA', start=start, progress=False)
     if acaocone == 'BBDC4':
-        data = yf.download('BBDC4.SA', start=start)
+        data = yf.download('BBDC4.SA', start=start, progress=False)
     if acaocone == 'BOVA11':
-        data = yf.download('BOVA11.SA', start=start)
+        data = yf.download('BOVA11.SA', start=start, progress=False)
     if acaocone == 'PETR4':
-        data = yf.download('PETR4.SA', start=start)
+        data = yf.download('PETR4.SA', start=start, progress=False)
     if acaocone == 'VALE3':
-        data = yf.download('VALE3.SA', start=start)
+        data = yf.download('VALE3.SA', start=start, progress=False)
 
     for window in windows:
         # get a dataframe with realized volatility
