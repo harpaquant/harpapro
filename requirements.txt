@@ -12,4 +12,3 @@ seaborn
 fundamentus
 riskfolio-lib
 statsmodels
-st-paywall
