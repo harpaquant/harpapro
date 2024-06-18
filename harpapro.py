@@ -20,7 +20,7 @@ import riskfolio as rp
 from statsmodels.regression.linear_model import OLS
 from statsmodels.tsa.stattools import adfuller
 import statsmodels.api as sm
-from st_paywall import add_auth
+#from st_paywall import add_auth
 
 st.markdown('<span style="color:gold; font-size: 48px">&#9733;</span> <span style="font-size: 48px; font-weight: bold">Harpa Quant Pro</span>', unsafe_allow_html=True)
 st.markdown("""##### Ferramentas quantitativas para o investidor prospectivo.""")
