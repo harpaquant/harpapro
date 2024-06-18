@@ -254,7 +254,7 @@ elif selected_calculator == "Seguro da Carteira":
         """)
     st.markdown('---')
 
-    ult_bova11_disaster = yf.download('BOVA11.SA')['Close'].iloc[-1]
+    ult_bova11_disaster = yf.download('BOVA11.SA', progress=False)['Close'].iloc[-1]
     # Carregar a planilha
     bova11_disaster = pd.read_excel('bova11_disaster.xlsx')
     bova11_disaster['Fração do Spot'] = bova11_disaster['Strike'] / ult_bova11_disaster
